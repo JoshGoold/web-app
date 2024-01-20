@@ -1,0 +1,96 @@
+body {
+    background-image: url(../img/background2.webp);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.form-box{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 20px;
+    height: 530px;
+    width: 450px;
+    margin-top: 150px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+.input-field{
+    align-items: center;
+    padding: 20px;
+    margin-left: 40px;
+    
+}
+.btn-group button{
+    flex-basis: 30%;
+    background: black;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-left: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.button-shrink{
+    transition: all 0.2s ease-in-out;
+}
+.button-shrink:hover{
+    transform: scale(1.1);
+}
+.input-field i{
+    color: #999;
+    margin-left: 15px;
+}
+input {
+    width: 60%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    background-color: #b8b8b8;
+    padding: 15px 18px;
+}
+.btn-signin button{
+    background: transparent;
+    color: black;
+    height: 20px;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-basis: 15%;
+}
+b {
+    font-size: 13px;
+    font-weight: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+form p {
+    text-align: left;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 80px;
+}
+.btn-signup button{
+    background: transparent;
+    color: black;
+    height: 20px;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-basis: 15%;
+}

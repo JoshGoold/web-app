@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" id="main" />
+    <title>The Capital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dist/css/main-css.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://kit.fontawesome.com/4c27c7009d.js" crossorigin="anonymous"></script>
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/openai-test.js"></script>
+    <script src="dist/js/main-js.js"></script>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+// Define the API URL 
+const apiUrl =
+    "http://api.weatherapi.com/v1/current.json?key=d60caba84cdd484c9a4215845241201&q=Toronto&aqi=no";
+
+// Get the HTML element
+const htmlElement = document.getElementById("weather");
+
+// Make a GET request
+function updateWeather(){ 
+fetch(apiUrl)
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json();
+    })
+    .then((data) => {
+        // Set the text content of the HTML element to the API data
+        htmlElement.textContent = ` ${data.current.temp_c}°C`;
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+    }); 
+    }
+    setInterval(updateWeather, 5000);
+
+    updateWeather();
+});    
+
+</script>
+<header id="main-header">
+    <h1 id="dark1"class="darkm">TC</h1>
+    <nav>
+        <i id="dark6" class="fa-solid fa-house button-shrink"></i><button id="dark2" onclick="window.location.href='main.html'" class="button-shrink ">
+            Home
+        </button>
+        <i id="dark21" class="fa-solid fa-comments button-shrink"></i><button onclick="" class="button-shrink" id="dark20"> Community </button>
+        <i id="dark7" class="fa-solid fa-user button-shrink"></i><button id="dark3" onclick="window.location.href='signup.html'" class="button-shrink ">
+            Sign Up
+        </button>
+        <i id="dark8" class="fa-solid fa-moon button-shrink"></i><button id="dm" class="button-shrink">  Dark Mode</button>
+        
+    </nav>
+</header>
+
+<body id="lm">
+    <div class="form-box-main darkm" id="fb">
+        <div id="logo" class="lgo"><img src="../web-app-2/dist/img/thecapitallogo1.png" height="200px" width="300px"></div>
+        <i id="dark9" class="fa-solid fa-cloud darkm"></i><span id="weather"></span>
+        <span id="time" class="tdis"></span>
+        
+        <hr id="dark10">
+        <br/>
+       
+    </div> 
+  <div class="back" id="dark22">
+        <span id="dark23" class="text-loop"></span>
+        <video autoplay muted loop>
+            <source src="dist/mp4/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <br>
+    <div class="blog" id="dark12">
+        
+        <br>
+        <h1 id="dark13"> Creator Blog </h1>
+        <br> 
+        <hr id="dark11">
+        <nav>
+            <button id="dark14" onclick="" class="button-shrink bl"> Philosophy </button>
+            <button id="dark15" onclick="" class="button-shrink bl"> Wisdom </button>
+            <button id="dark16" onclick="" class="button-shrink bl"> Favourite's </button>
+            <button id="dark17" onclick="" class="button-shrink bl"> Top-Rated </button>
+            <button id="dark19" onclick="" class="button-shrink bl"> About Creator </button>
+        </nav>
+        <br>
+        <h1 id="blog-header" class="exp1"></h1>
+        <br>
+        <p id="blog-content" class="exp2"></p>
+        <p id="extra-content" class="exp2"></p>
+        <table class="blog-field" id="blog-table">
+            <tr>
+                <td><div id="d22" class="link-form button-shrink">
+                    <h1 id="HUB" class="page-flip"> Theory: How a Universe is Born </h1>
+                </div></td>
+                <td><div id="d23" class="link-form button-shrink">
+                    <h1 id="FLD" class="page-flip"> The Force of Life and Death </h1>
+                </div></td>
+                <td><div id="d24" class="link-form button-shrink">
+                    <h1 id="TAQ" class="page-flip"> The Atom Question </h1>
+                </div></td>
+            </tr>
+            <tr>
+                <td><div id="d25" class="link-form button-shrink">
+                    <h1 id="IHP" class="page-flip"> Importance of Having Principles </h1>
+                </div></td>
+                <td><div id="d26" class="link-form button-shrink">
+                    <h1 id="MTF" class="page-flip"> My Take on Free Will </h1>
+                </div></td>
+                <td><div id="d27" class="link-form button-shrink">
+                    <h1 id="WIP" class="page-flip"> What is peace? </h1>
+                </div></td>
+            </tr>
+            <tr>
+                <td><div id="d28" class="link-form button-shrink">
+                    <h1 id="FP" class="page-flip"> Failures Purpose</h1>
+                </div></td>
+                <td><div id="d29" class="link-form button-shrink">
+                    <h1 id="DCD" class="page-flip"> The Dangers of Cheap Dopamine</h1>
+                </div></td>
+                <td><div id="d30" class="link-form button-shrink">
+                    <h1 id="TRM" class="page-flip"> My Take on Religion</h1>
+                </div></td>
+            </tr>
+           
+            <br>
+            <tr>
+                <td><button class="button-shrink pg" id="pg1"> 1 </button></td>
+                
+                <td><button class="button-shrink pg" id="pg2"> 2 </button></td>
+            </tr>
+        </table>
+        
+        <button class="button-shrink pg backbtn" id="back"> Back </button> 
+    
+    </div>
+   <span></span>
+    
+</body>
+
+</html>

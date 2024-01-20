@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Sign in </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" id="signinuphtml" name="accountsetup">
+        <link rel="stylesheet" href="dist/css/accountsetup.css">
+        <script src="https://kit.fontawesome.com/4c27c7009d.js" crossorigin="anonymous"></script>
+        <script src="dist/js/accountsetup.js"></script>
+    </head>
+    <body>
+        <div class="form-box">
+            <br>
+            <h1> Sign In </h1>
+            <br>
+            <form class="accountlogin" id="accountlogin">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" id="accountUserName" class="accountName" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="accountUserPassword" class="accountPassword" required>
+                        <p> Lost password <a href="#">Click here!</a></p>
+                    </div>
+                     
+                    <div class="btn-group">
+                        <button type="button" class="button-shrink" id="signupBtn" onclick="signIn()">Sign in</button>
+                    </div>
+                    <br><br>
+                    
+                </div>
+            </form>
+            <div class="btn-signup">
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp;&nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp;&nbsp; 
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<b>Dont have an account? </b>
+                        <button type="button" class="button-shrink" id="signinBtn" onclick="window.location.href='signup.html'"> Sign up</button>
+                    </div>
+        </div>
+    </body>
+</html>
