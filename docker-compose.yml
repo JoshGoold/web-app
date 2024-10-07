@@ -11,7 +11,7 @@ services:
     # volumes:
     #   - /home/brajam/data/webhooks:/data/web-hooker/webhooks
 
-  app:
+  reverse-proxy:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
